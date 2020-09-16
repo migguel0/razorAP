@@ -9,7 +9,7 @@ awk '/hashcat/ {print $3}' hostapd-wpe.log > hash.txt
 
 if [ "$1" == "csv" ]
 then
-	if [ -f "resultados.csv"]; then
+	if [ -f "resultados.csv" ]; then
 		rm resultados.csv
 	fi
 	echo "username	response	hashcat" >> resultados.csv
