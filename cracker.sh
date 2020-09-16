@@ -1,13 +1,24 @@
 #!/bin/bash
 
+echo -e "\e[33m --------------------------------------- \e[32m"
+echo -e "\e[33m --------------------------------------- \e[32m"
+echo -e "\e[33m --------- CRACKER HELPER -------------- \e[32m"
+echo -e "\e[33m --------------------------------------- \e[32m"
+echo -e "\e[33m --------------------------------------- \e[32m"
+echo
+echo
+echo
+
 #------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------
-#REVISAR EL JOHN VA RARO
+#REVISAR JOHN
 function johnCracking(){
     	echo -e "\e[33mHas seleccionado John the Reaper\e[32m"
 
 	echo -e "\e[33mIndique la ruta absoluta del diccionarioa utilizar\e[39m"
 	read diccionario
+	#Parsing log file
+	cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
 	#------------------------------------------------------------------------------------------
 	#------------------------------------------------------------------------------------------
 	#Mostrar lineas con el HASH y que decida el usuario el numero de linea que quiere crackear
@@ -29,10 +40,11 @@ function asleapCracking(){
 
 	echo -e "\e[33mIndique la ruta absoluta del diccionarioa utilizar\e[39m"
 	read diccionario
+	#Parsing log file
+	cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
 	#------------------------------------------------------------------------------------------
 	#------------------------------------------------------------------------------------------
 	#Mostrar lineas con el RESPONSE y que decida el usuario el numero de linea que quiere crackear
-	
 	awk '/username/ {print $2}' logaux.log > /var/tmp/users.txt
 	awk '/response/ {print $2}' logaux.log > /var/tmp/response.txt
 	awk '/challenge/ {print $2}' logaux.log > /var/tmp/challenge.txt
@@ -69,7 +81,7 @@ johnTool="john"
 asleapTool="asleap"
 no="no"
 
-cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
+#cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
 
 
 
@@ -77,7 +89,8 @@ cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
 #Bucle infinito hasta que diga NO
 while :
 do
-	echo -e "\e[33mSeleccione la herramienta para la fase de cracking: [john] [asleap]\e[39m"
+	#john no funciona bien, se elimina por ahora de las opciones
+	echo -e "\e[33mSeleccione la herramienta para la fase de cracking: [asleap]\e[39m"
 	read tool
 
 	if [ $tool = $johnTool ]; then
@@ -88,13 +101,13 @@ do
 	
 	echo -e "\e[33m¿Desea probar con otro Hash u otra herramienta de nuevo? [si] [no]\e[39m"
 	read anotherLoop
+	clear
 	if [ $anotherLoop = $no ]; then
 		#Borrar archivo de log auxiliar
 		rm logaux.log
 		break
 	fi
 done
-
 
 
 
