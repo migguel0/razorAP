@@ -29,7 +29,7 @@ Ejecutar el script de instalación.
 ```
 
 
-## Usage
+## Uso
 
 Para lanzarla herramienta ejecutar el script de inilización, el cual abrirá dos nuevas terminales
 ```bash
@@ -60,3 +60,13 @@ Los pasos a seguir sobre el script de cracking son los siguientes:
 1. Indicar la herramienta a emplear.
 2. Indicar ruta absoluta del diccionario con el que se hará fuerza bruta.
 3. Indicar, entre los Hashes enumerados por pantalla, el número que identifica el Hash a crackear.
+
+
+
+## Notas
+
+Las pruebas con la herramienta se han hecho en máquina virtual con Kali como SO.
+
+Para las pruebas se ha usado la antena WiFi Alfa AWUS036AC.
+
+Para la generación de los certificados se ha hecho uso del script en Python del siguiente repositorio de github: https://github.com/WJDigby/apd_launchpad.git
