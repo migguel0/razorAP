@@ -22,6 +22,12 @@ cp $pwd/installer/analyzer.sh $pwd
 cp $pwd/installer/init.sh $pwd
 cp $pwd/installer/termsScript.sh $pwd
 
+chmod +x razorAP.sh
+chmod +x analyzer.sh
+chmod +x init.sh
+chmod +x termsScript.sh
+chmod +x cracker.sh
+
 cd hostapdWPEinstall
 git clone https://github.com/WJDigby/apd_launchpad.git
 #Esta linea es necesaria ?¿?¡
