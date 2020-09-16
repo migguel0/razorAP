@@ -8,6 +8,7 @@ Este punto de acceso fraudulento deberá suplantar el nombre de la red corporati
 
 Ejemplo:
 
+![Screenshot](NTLM.png)
 
 ## Instalación
 
@@ -61,6 +62,7 @@ Los pasos a seguir sobre el script de cracking son los siguientes:
 2. Indicar ruta absoluta del diccionario con el que se hará fuerza bruta.
 3. Indicar, entre los Hashes enumerados por pantalla, el número que identifica el Hash a crackear.
 
+![Screenshot](razorAP.png)
 
 
 ## Notas
