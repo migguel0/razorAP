@@ -19,6 +19,8 @@ touch hostapd-wpe.log
 cp $pwd/installer/hostapd-wpe.eap_user $pwd
 cp $pwd/installer/razorAP.sh $pwd
 cp $pwd/installer/analyzer.sh $pwd
+cp $pwd/installer/init.sh $pwd
+cp $pwd/installer/termsScript.sh $pwd
 
 cd hostapdWPEinstall
 git clone https://github.com/WJDigby/apd_launchpad.git
