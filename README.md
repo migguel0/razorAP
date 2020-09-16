@@ -1,10 +1,10 @@
 # razorAP
 
-razorAP es una herramienta de Bash y Python empleada para generar puntos de acceso falsos de redes corporativas. 
+razorAP es una herramienta de Bash y Python empleada para generar puntos de acceso falsos de redes 802.1x . 
 
-Para acceder a una red corporativa, el usuario debe de incluir su nombre de usuario y su contraseña del DC. 
+Para realizar la autenticación en una red 802.1x , el usuario debe incluir su nombre de usuario y su contraseña del DC. 
 
-Este punto de acceso fraudulento deberá suplantar el nombre de la red corporativa sobre la que se quiere probar. La intención es que un usuario víctima conecte su dispositivo al AP levantado por nuestra tool en vez de al AP verdadero. Si esto sucede, y el usuario incluye su nombre de usuario y contraseña, razorAP recogerá tanto nombre de usuario como el hash de la contraseña (NTLM).
+El objetivo es que un usuario víctima conecte su dispositivo al AP levantado por nuestra herramienta. Si esto sucede, y el usuario introduce su nombre de usuario y contraseña para autenticarse, razorAP recogerá tanto nombre de usuario como el hash (NTLM) de la contraseña.
 
 Ejemplo:
 
