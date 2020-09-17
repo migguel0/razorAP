@@ -54,7 +54,7 @@ Ya levantado el punto de acceso, solo queda esperar a que algún usuario se cone
 
 Es en este momento cuando podemos hacer uso de la terminal de cracking, o en su defecto, si esta ha sido cerrada, ejecutar el script 'cracker.sh'.
 
-#### Cracking
+#### Cracking (TO-DO)
 La herramienta implementada por ahora para tratar de crackear la contraseña es asleap.
 
 Los pasos a seguir sobre el script de cracking son los siguientes:
