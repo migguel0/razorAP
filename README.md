@@ -39,7 +39,7 @@ Para lanzarla herramienta ejecutar el script de inilización, el cual abrirá do
 Por un lado se abrirá la terminal de configuración del punto de acceso y por otro lado la terminal de cracking.
 
 #### Configuración del punto de acceso
-La terminal de configuración nos ayudará en el proceso de congiguración con los siguientes pasos:
+La terminal de configuración nos ayudará en el proceso de configuración con los siguientes pasos:
 1. Seleccionar interfaz a emplear.
 2. Nombre del punto de acceso.
 3. Nombre del certificado (será generado automáticamente por la herramienta)
