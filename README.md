@@ -1,8 +1,13 @@
 # razorAP
 
-razorAP es una herramienta de Bash y Python empleada para generar puntos de acceso falsos de redes 802.1x . 
+razorAP es una herramienta de Bash y Python empleada para generar puntos de acceso falsos de redes Wifi con autenticación 802.1X .
 
-Para realizar la autenticación en una red 802.1x , el usuario debe incluir su nombre de usuario y su contraseña del DC. 
+Las piezas básicas para la autenticación 802.1X son:
+. Solicitante : cliente de software que se ejecuta en la estación de trabajo WiFi.
+. Autenticador : punto de acceso WiFi
+. Servidor de autenticación : Una base de datos de autenticación, normalmente un servidor RADIUS
+
+El protocolo de autenticación ampliable (EAP) es el utilizado para pasar la información de autenticación entre el solicitante (la estación de trabajo Wi-Fi) y el servidor de autenticación (RADIUS) y es el tipo de EAP el que en realidad controla y define la autenticación.
 
 El objetivo es que un usuario víctima conecte su dispositivo al AP levantado por nuestra herramienta. Si esto sucede, y el usuario introduce su nombre de usuario y contraseña para autenticarse, razorAP recogerá tanto nombre de usuario como el hash (NTLM) de la contraseña.
 
