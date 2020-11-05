@@ -19,18 +19,18 @@ Screenshot](NTLM.png)
 
 Clone the github repository
 
-``bash
+```bash
 git clone https://github.com/migguel0/razorAP
 ```
 
 Grant execution permissions to the installation script.
 
-``bash
+```bash
 chmod +x install.sh
 ```
 Execute the installation script.
 
-``bash
+```bash
 ./install.sh
 ```
 
@@ -38,7 +38,7 @@ Execute the installation script.
 ## Use
 
 To launch the tool, run the initialization script, which will open two new terminals
-``bash
+```bash
 ./init.sh
 ```
 On the one hand, the access point configuration terminal will be opened and on the other hand the cracking terminal.
