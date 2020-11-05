@@ -9,7 +9,7 @@ The basic pieces for 802.1X authentication are
 
 The Extensible Authentication Protocol (EAP) is used to send authentication information between the supplicant (the Wi-Fi workstation) and the authentication server (RADIUS) and it is the type of EAP that actually controls and defines the authentication.
 
-This tool is aimed at assisting in the performance of some controls in Wi-Fi audits. Following the OWISAM methodology (https://www.owisam.org/index.php) the controls that razorAP would help with are the following: OWISAM-CT-001, OWISAM-CT-004, OWISAM-CT-007.
+This tool is aimed to assist in the execution of some controls in Wi-Fi audits. Following the OWISAM methodology (https://www.owisam.org/index.php) the controls that razorAP would help with are the following: OWISAM-CT-001, OWISAM-CT-004, OWISAM-CT-007.
 
 An example of what is expected when using razorAP is to achieve that a user connects to the Access Point that we have deployed with the tool, which will enter his username and password to authenticate. Then, because razorAP acts as an Authenticator, razorAP will collect the authentication information (username and the hash NTLM of the password).
 
