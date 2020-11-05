@@ -1,6 +1,6 @@
 # razorAP
 
-razorAP is a Bash and Python tool used to generate Fake Access Point for Wi-Fi networks with 802.1X authentication. 
+razorAP is a Bash and Python tool used to generate Fake Access Points for Wi-Fi networks with 802.1X authentication. 
 
 The basic pieces for 802.1X authentication are
 - Applicant: software client running on the Wi-Fi workstation.
