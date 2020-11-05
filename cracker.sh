@@ -13,9 +13,9 @@ echo
 #------------------------------------------------------------------------------------------
 #REVISAR JOHN
 function johnCracking(){
-    	echo -e "\e[33mHas seleccionado John the Reaper\e[32m"
+    	echo -e "\e[33mJohn the Reaper selected\e[32m"
 
-	echo -e "\e[33mIndique la ruta absoluta del diccionarioa utilizar\e[39m"
+	echo -e "\e[33mEnter the absolute path of the dictionary to be used\e[39m"
 	read diccionario
 	#Parsing log file
 	cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
@@ -25,7 +25,7 @@ function johnCracking(){
 	awk '/jtr/ {print $3}' hostapd-wpe.log > /var/tmp/soloHash.txt
 	sed '=' /var/tmp/soloHash.txt
 
-	echo -e "\e[33mIndique el numero de HASH que quiere crackear\e[39m"
+	echo -e "\e[33mIndicate the number of HASH shown to crack\e[39m"
 	read lineNumber
 	awk "NR==$lineNumber {print \$1}" /var/tmp/soloHash.txt
 	awk "NR==$lineNumber {print \$1}" /var/tmp/soloHash.txt > /var/tmp/hashSelected.hash
@@ -36,9 +36,9 @@ function johnCracking(){
 
 function asleapCracking(){
 	counter=0
-	echo -e "\e[33mHas seleccionado asleap\e[39m"
+	echo -e "\e[33masleap selected\e[39m"
 
-	echo -e "\e[33mIndique la ruta absoluta del diccionarioa utilizar\e[39m"
+	echo -e "\e[33mEnter the absolute path of the dictionary to be used\e[39m"
 	read diccionario
 	#Parsing log file
 	cat hostapd-wpe.log | sed 's/::::/ /g' > logaux.log
@@ -59,7 +59,7 @@ function asleapCracking(){
 	
 	awk '/response/' parser.txt | sed '='
 
-	echo -e "\e[33mIndique el numero de HASH que quiere crackear\e[39m"
+	echo -e "\e[33mIndicate the number of HASH shown to crack\e[39m"
 	read lineNumber
 	#awk "NR==$lineNumber {print \$3}" parser.txt
 	challenge=$(awk "NR==$lineNumber {print \$3}" parser.txt)
@@ -90,7 +90,7 @@ no="no"
 while :
 do
 	#john no funciona bien, se elimina por ahora de las opciones
-	echo -e "\e[33mSeleccione la herramienta para la fase de cracking: [asleap]\e[39m"
+	echo -e "\e[33mSelect the tool for the cracking phase: [asleap]\e[39m"
 	read tool
 
 	if [ $tool = $johnTool ]; then
@@ -99,7 +99,7 @@ do
 		asleapCracking
 	fi
 	
-	echo -e "\e[33m¿Desea probar con otro Hash u otra herramienta de nuevo? [si] [no]\e[39m"
+	echo -e "\e[33m¿Desea probar con otro Hash u otra herramienta de nuevo? [yes] [no]\e[39m"
 	read anotherLoop
 	clear
 	if [ $anotherLoop = $no ]; then
