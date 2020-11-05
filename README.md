@@ -13,7 +13,7 @@ The objective is that a user connects his device to the AP deployed by our tool.
 
 Example:
 
-Screenshot](NTLM.png)
+[Screenshot](NTLM.png)
 
 ## Installation
 
@@ -67,7 +67,7 @@ The steps to follow about the cracking script are the following:
 2. Indicate the absolute path of the dictionary with which you will use the brute force.
 3. Indicate, among the Hashes listed on the screen, the number that identifies the Hash to be cracked.
 
-Screenshot](razorAP.png)
+[Screenshot](razorAP.png)
 
 
 ## Notes
