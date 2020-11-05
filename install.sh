@@ -30,7 +30,6 @@ chmod +x cracker.sh
 
 cd hostapdWPEinstall
 git clone https://github.com/WJDigby/apd_launchpad.git
-#Esta linea es necesaria ?¿?¡
 cp $pwd/hostapdWPEinstall/apd_launchpad/apd_launchpad.py /etc/hostapd-wpe/certs/
 
 rm -r $pwd/installer/
