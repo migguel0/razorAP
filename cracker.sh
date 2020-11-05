@@ -99,7 +99,7 @@ do
 		asleapCracking
 	fi
 	
-	echo -e "\e[33m¿Desea probar con otro Hash u otra herramienta de nuevo? [yes] [no]\e[39m"
+	echo -e "\e[33mDo you want to crack another hash or use another tool? [yes] [no]\e[39m"
 	read anotherLoop
 	clear
 	if [ $anotherLoop = $no ]; then
