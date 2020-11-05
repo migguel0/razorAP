@@ -56,6 +56,7 @@ Once all the steps have been completed, the certificates to be included in the a
 
 Once the access point has been deployed, all that remains is to wait for a user to connect. Once connected, a message similar to the following one will be displayed on the terminal:
 
+![Screenshot](razorAP_init.png)
 
 At this moment we can use the cracking terminal, or if it has been closed, execute the script 'cracker.sh'.
 
