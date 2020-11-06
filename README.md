@@ -60,7 +60,7 @@ Once the access point has been deployed, all that remains is to wait for a user 
 At this moment we can use the cracking terminal, or if it has been closed, execute the script 'cracker.sh'.
 
 #### Cracking (TO-DO)
-The tool implemented for now to try to crack the password is asleap.
+The tool implemented for now to try to crack the password is 'asleap'.
 
 The steps to follow about the cracking script are the following:
 1. Indicate the tool to be used.
