@@ -48,7 +48,7 @@ fi
 
 
 echo -e "\e[33mCreating certificates and configuration files... \e[39m"
-python $pwd/hostapdWPEinstall/apd_launchpad/apd_launchpad.py -t $cert -s $SSID -i $interface -cn $commonName
+python3 $pwd/hostapdWPEinstall/apd_launchpad/apd_launchpad.py -t $cert -s $SSID -i $interface -cn $commonName
 
 if [ $? = 0 ]; then
 	echo -e "\e[33mEverything correctly generated \e[39m"
