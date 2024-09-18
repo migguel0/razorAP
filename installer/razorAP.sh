@@ -57,14 +57,21 @@ if [ $? = 0 ]; then
 
 	echo "" >> $pwd/$cert/$cert.conf
 	echo "#wpe_logfile=$pwd/hostapd-wpe.log" >> $pwd/$cert/$cert.conf
-	#configuracion extra para 5GHz
-	if [$band != $YES]; then
+ 
+ 	#optional configuration depenting on each case, by default disabled
+  
+  	#echo "rsn_pairwise=CCMP" >> $pwd/$cert/$cert.conf
+        #echo "group_cipher=CCMP" >> $pwd/$cert/$cert.conf
+	#sed -i 's/wpa_pairwise=TKIP\ CCMP/wpa_pairwise=CCMP\ CCMP-256/' $pwd/$cert/$cert.conf
+  	#sed -i 's/wpa_key_mgmt=WPA-EAP/wpa_key_mgmt=WPA-EAP\ WPA-EAP-SHA256/' $pwd/$cert/$cert.conf
+   
+	#extra config for 5GHz
+	if [ $band != $YES ]; then
 		echo "hw_mode=a" >> $pwd/$cert/$cert.conf
-		echo "channel=$channel" >> $pwd/$cert/$cert.conf
 		echo "driver=nl80211" >> $pwd/$cert/$cert.conf
 		echo "ieee80211n=1" >> $pwd/$cert/$cert.conf
 		echo "ieee80211ac=1" >> $pwd/$cert/$cert.conf
-		sed 's/ieee8021x=1/#ieee8021x=1/' $pwd/$cert/$cert.conf
+		#sed -i 's/ieee8021x=1/#ieee8021x=1/' $pwd/$cert/$cert.conf
 	fi
 
 	nmcli radio wifi off
